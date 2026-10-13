@@ -60,6 +60,28 @@ Abre la app, elige un rango de fechas y calcula las comisiones. También puedes 
 curl "http://localhost:3001/api/comisiones?fechaInicio=2026-10-01&fechaFin=2026-10-31"
 ```
 
+## Capturas de pantalla
+
+**1. Un mes con pocas ventas (septiembre):** los vendedores sin ventas en el rango aparecen con 0 y comisión $0.00.
+
+![Septiembre 2026](docs/capturas/septiembre.png)
+
+**2. Rango de dos meses (septiembre a octubre):** se suman las ventas de ambos meses por vendedor.
+
+![Septiembre a octubre 2026](docs/capturas/septiembre-octubre.png)
+
+**3. Un mes completo (octubre):** todos los vendedores tienen ventas y cada uno recibe su comisión según la regla que le corresponde.
+
+![Octubre 2026](docs/capturas/octubre.png)
+
+**4. Un solo día (inicio = fin):** solo se cuentan las ventas de ese día.
+
+![Un solo día](docs/capturas/un-dia.png)
+
+**5. Fechas inválidas:** si la fecha de inicio es mayor que la fecha fin, se muestra un mensaje de error y no se calcula nada.
+
+![Error de fechas](docs/capturas/error-fechas.png)
+
 ## Estructura de carpetas
 
 ```
